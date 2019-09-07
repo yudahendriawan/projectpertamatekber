@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Bilangan 1"/>
+
+    <EditText
+        android:id="@+id/edt_bil1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:text="Bilangan 2"/>
+
+    <EditText
+        android:id="@+id/edt_bil2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:layout_weight="0.5"
+            android:layout_marginStart="15dp"
+            android:id="@+id/rd_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb_plus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tambah"/>
+
+            <RadioButton
+                android:id="@+id/rb_minus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kurang"/>
+
+            <RadioButton
+                android:id="@+id/rb_multiply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kali"/>
+
+            <RadioButton
+                android:id="@+id/rb_bagi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bagi"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_hasil"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="Hasil"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+
+    </LinearLayout>
+
+
+<!--    <RadioGroup-->
+<!--        android:id="@+id/rd_group"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/rb_plus"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Tambah"/>-->
+
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/rb_minus"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Kurang"/>-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/rb_multiply"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Kali"/>-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/rb_bagi"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Bagi"/>-->
+
+<!--        </LinearLayout>-->
+<!--    </RadioGroup>-->
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <Button
+            android:id="@+id/btn_hitung"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="0.25"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Hitung"/>
+
+
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="0.25"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Clear"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
