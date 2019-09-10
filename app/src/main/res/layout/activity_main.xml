@@ -6,34 +6,44 @@
     android:padding="10dp"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@android:color/darker_gray"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:text="Bilangan 1"/>
+        android:text="@string/bilangan_1"/>
 
     <EditText
         android:id="@+id/edt_bil1"
+        android:layout_marginTop="5dp"
+        android:paddingStart="15dp"
+        android:background="@drawable/custom_rect"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"/>
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:inputType="numberDecimal"/>
 
     <TextView
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_marginStart="10dp"
         android:layout_height="wrap_content"
-        android:text="Bilangan 2"/>
+        android:text="@string/bilangan_2"/>
 
     <EditText
         android:id="@+id/edt_bil2"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/custom_rect"
+        android:layout_marginStart="15dp"
+        android:paddingStart="15dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"/>
+        android:layout_height="40dp"
+        android:inputType="numberDecimal"/>
 
     <LinearLayout
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
 
         android:orientation="horizontal"
@@ -50,25 +60,25 @@
                 android:id="@+id/rb_plus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tambah"/>
+                android:text="@string/tambah"/>
 
             <RadioButton
                 android:id="@+id/rb_minus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Kurang"/>
+                android:text="@string/kurang"/>
 
             <RadioButton
                 android:id="@+id/rb_multiply"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Kali"/>
+                android:text="@string/kali"/>
 
             <RadioButton
                 android:id="@+id/rb_bagi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Bagi"/>
+                android:text="@string/bagi"/>
 
         </RadioGroup>
 
@@ -78,7 +88,8 @@
             android:gravity="center"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:hint="Hasil"
+            android:hint="@string/hasil"
+            android:background="@drawable/custom_rect"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             />
@@ -163,7 +174,7 @@
 <!--    </RadioGroup>-->
 
     <LinearLayout
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="50dp">
@@ -175,7 +186,7 @@
             android:layout_weight="0.25"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Hitung"/>
+            android:text="@string/hitung"/>
 
 
 
@@ -186,9 +197,17 @@
             android:layout_weight="0.25"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Clear"/>
+            android:text="@string/clear"/>
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="@string/created_by_yudahendriawan"/>
 
 
 
