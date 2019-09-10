@@ -18,7 +18,6 @@ import butterknife.ButterKnife;
 
 import static com.example.projectpertamatekber.R.id.rb_plus;
 
-
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
@@ -60,7 +59,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-              ButterKnife.bind(this);
+        getSupportActionBar().setTitle("Kalkulator Sederhana");
+
+        ButterKnife.bind(this);
 
 //        bil1 = findViewById(R.id.edt_bil1);
 //        bil2 = findViewById(R.id.edt_bil2);
@@ -107,7 +108,9 @@ public class MainActivity extends AppCompatActivity {
                     tvhasil = db1 / db2;
                 }
 
+
                 hasil.setText(String.valueOf(tvhasil));
+
             }
         });
 
@@ -121,66 +124,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-        /*String bbil1 = bil1.getText().toString().trim();
-        String bbil2 = bil2.getText().toString().trim();
-
-        final Double bilangan1 = toDouble(bbil1);
-        final Double bilangan2 = toDouble(bbil2);
-
-        hitung.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int id = rd_group.getCheckedRadioButtonId();
-                switch (id){
-                    case R.id.rb_plus:
-                        double hasiltambah = bilangan1+bilangan2;
-                        hasil.setText(String.valueOf(hasiltambah));
-                        break;
-                    case R.id.rb_minus:
-                        double hasilkurang = bilangan1-bilangan2;
-                        hasil.setText(String.valueOf(hasilkurang));
-                        break;
-                    case R.id.rb_multiply:
-                        double hasilkali = bilangan1*bilangan2;
-                        hasil.setText(String.valueOf(hasilkali));
-                        break;
-                    case R.id.rb_bagi:
-                        double hasilbagi = bilangan1/bilangan2;
-                        hasil.setText(String.valueOf(hasilbagi));
-                        break;
-                }
-
-            }
-        });*/
-
     }
 
-//    public void setBtRadio() {
-//
-//
-//
-//        rd_group.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(RadioGroup group, int checkedId) {
-//                int idChecked = rd_group.getCheckedRadioButtonId();
-//                switch (idChecked){
-//                    case R.id.rb_bagi:
-//                        hasil.setText(String.valueOf(hasilbagi));
-//                        break;
-//                    case R.id.rb_plus:
-//                        hasil.setText(String.valueOf(hasiltambah));
-//                        break;
-//                    case R.id.rb_multiply:
-//                        hasil.setText(String.valueOf(hasilkali));
-//                        break;
-//                    case R.id.rb_minus:
-//                        hasil.setText(String.valueOf(hasilkurang));
-//                        break;
-//                }
-//            }
-//        });
-//
-//    }
 }
+
