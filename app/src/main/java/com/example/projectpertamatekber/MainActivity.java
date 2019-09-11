@@ -128,7 +128,20 @@ public class MainActivity extends AppCompatActivity {
                     } else if (pilihan.equalsIgnoreCase("bagi")) {
                         tvhasil = db1 / db2;
                     }
-                    hasil.setText(String.valueOf(tvhasil));
+
+//                    String tvHasilToString = String.valueOf(tvhasil);
+//                    StringBuffer buffer = new StringBuffer(tvHasilToString);
+//
+//                    //char lastCharHasil = tvHasilToString.charAt(tvHasilToString.length()-1);
+//
+//                    if(buffer.charAt(tvHasilToString.length()-1)){
+//                        int hasil1 = Integer.parseInt(tvHasilToString);
+//                        hasil.setText(String.valueOf(hasil1));
+//                    }
+//                    else{
+                        hasil.setText(String.valueOf(tvhasil));
+                   // }
+
                 }
             }
         });
@@ -141,6 +154,7 @@ public class MainActivity extends AppCompatActivity {
                 hasil.setText("");
                 rbtambah.setChecked(true);
                 bil1.requestFocus();
+                pilihan = "default";
             }
         });
 
