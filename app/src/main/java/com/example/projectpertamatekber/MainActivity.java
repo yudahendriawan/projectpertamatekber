@@ -3,15 +3,19 @@ package com.example.projectpertamatekber;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 //import butterknife.ButterKnife;
 //import butterknife.BindView;
+
+import org.w3c.dom.Text;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -46,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R2.id.tv_hasil)
     TextView hasil;
 
-    String pilihan = "Tambah";
+    String pilihan = "default";
 
     @BindView(R2.id.btn_hitung)
     Button hitung;
@@ -62,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Kalkulator Sederhana");
 
         ButterKnife.bind(this);
+
+      //  rbtambah.setChecked(true);
 
 //        bil1 = findViewById(R.id.edt_bil1);
 //        bil2 = findViewById(R.id.edt_bil2);
@@ -93,24 +99,37 @@ public class MainActivity extends AppCompatActivity {
                 String b1 = bil1.getText().toString().trim();
                 String b2 = bil2.getText().toString().trim();
 
-                double db1 = Double.parseDouble(b1);
-                double db2 = Double.parseDouble(b2);
 
-                double tvhasil = 0;
 
-                if (pilihan.equalsIgnoreCase("tambah")) {
-                    tvhasil = db1 + db2;
-                } else if (pilihan.equalsIgnoreCase("kurang")) {
-                    tvhasil = db1 - db2;
-                } else if (pilihan.equalsIgnoreCase("kali")) {
-                    tvhasil = db1 * db2;
-                } else if (pilihan.equalsIgnoreCase("bagi")) {
-                    tvhasil = db1 / db2;
+                if(TextUtils.isEmpty(b1)){
+                    bil1.setError("Field ini harus diisi");
                 }
 
+                if(TextUtils.isEmpty(b2)){
+                    bil2.setError("Field ini harus diisi");
+                }
 
-                hasil.setText(String.valueOf(tvhasil));
+                if(pilihan.equalsIgnoreCase("default")){
+                    Toast.makeText(MainActivity.this, "Pilih operasi", Toast.LENGTH_SHORT).show();
+                }
 
+                if(!TextUtils.isEmpty(b1) && !TextUtils.isEmpty(b2) && !pilihan.equalsIgnoreCase("default")){
+
+                    double db1 = Double.parseDouble(b1);
+                    double db2 = Double.parseDouble(b2);
+                    double tvhasil = 0;
+
+                    if (pilihan.equalsIgnoreCase("tambah")) {
+                        tvhasil = db1 + db2;
+                    } else if (pilihan.equalsIgnoreCase("kurang")) {
+                        tvhasil = db1 - db2;
+                    } else if (pilihan.equalsIgnoreCase("kali")) {
+                        tvhasil = db1 * db2;
+                    } else if (pilihan.equalsIgnoreCase("bagi")) {
+                        tvhasil = db1 / db2;
+                    }
+                    hasil.setText(String.valueOf(tvhasil));
+                }
             }
         });
 
@@ -121,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
                 bil2.setText("");
                 hasil.setText("");
                 rbtambah.setChecked(true);
+                bil1.requestFocus();
             }
         });
 
