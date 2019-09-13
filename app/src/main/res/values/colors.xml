@@ -4,4 +4,11 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="light_grey">#E0E0E0</color>
+    <color name="color_light_grey">#c9cbcc</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_background_grey">#E9E9E9</color>
+    <color name="colorPrimaryLight">#006DF0</color>
+    <color name="silver">#c0c0c0</color>
+    <color name="silver_light">	#D3D3D3</color>
+    <color name="blue_sky">#00BFFF</color>
 </resources>

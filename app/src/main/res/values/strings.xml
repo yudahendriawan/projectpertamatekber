@@ -10,4 +10,6 @@
     <string name="hitung">Hitung</string>
     <string name="clear">Clear</string>
     <string name="created_by_yudahendriawan">Created by yudahendriawan</string>
+    <string name="masukkan_bilangan_kedua">Masukkan bilangan kedua</string>
+    <string name="masukkan_bilangan_pertama">Masukkan bilangan pertama</string>
 </resources>

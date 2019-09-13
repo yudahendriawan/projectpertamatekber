@@ -3,8 +3,11 @@ package com.example.projectpertamatekber;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -25,6 +28,8 @@ import static com.example.projectpertamatekber.R.id.rb_plus;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
+
+    boolean doubleBackToExitPressedOnce = false;
 
     @BindView(R2.id.rd_group)
     RadioGroup rd_group;
@@ -66,6 +71,9 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Kalkulator Sederhana");
 
         ButterKnife.bind(this);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
       //  rbtambah.setChecked(true);
 
@@ -128,19 +136,11 @@ public class MainActivity extends AppCompatActivity {
                     } else if (pilihan.equalsIgnoreCase("bagi")) {
                         tvhasil = db1 / db2;
                     }
+                    String ario = Double.toString(tvhasil);
 
-//                    String tvHasilToString = String.valueOf(tvhasil);
-//                    StringBuffer buffer = new StringBuffer(tvHasilToString);
-//
-//                    //char lastCharHasil = tvHasilToString.charAt(tvHasilToString.length()-1);
-//
-//                    if(buffer.charAt(tvHasilToString.length()-1)){
-//                        int hasil1 = Integer.parseInt(tvHasilToString);
-//                        hasil.setText(String.valueOf(hasil1));
-//                    }
-//                    else{
+                    Log.d("KELUARAN DARI ARIO", ario);
+
                         hasil.setText(String.valueOf(tvhasil));
-                   // }
 
                 }
             }
@@ -158,6 +158,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed(){
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
     }
 
 }

@@ -20,6 +20,9 @@
         android:id="@+id/edt_bil1"
         android:layout_marginTop="5dp"
         android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textSize="14sp"
+        android:hint="@string/masukkan_bilangan_pertama"
         android:layout_marginEnd="15dp"
         android:background="@drawable/custom_rect"
         android:layout_width="match_parent"
@@ -42,6 +45,9 @@
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textSize="14sp"
+        android:hint="@string/masukkan_bilangan_kedua"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:inputType="numberDecimal"/>
@@ -187,10 +193,12 @@
         android:layout_marginTop="30dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="50dp"
+        android:padding="5dp">
 
         <Button
             android:id="@+id/btn_hitung"
+            android:background="@drawable/bg_button_white"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_weight="0.25"
@@ -205,7 +213,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_weight="0.25"
-
+            android:background="@drawable/bg_button_white"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/clear"/>
@@ -214,10 +222,10 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginTop="100dp"
-        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="bottom|center"
+        android:layout_marginBottom="15dp"
         android:text="@string/created_by_yudahendriawan"/>
 
 
